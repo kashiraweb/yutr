@@ -1,0 +1,5 @@
+/* El registro comparte panel, fondo y campos con el inicio de sesión. */
+@import url("login.css");
+
+/* Ajustes propios del registro */
+.field .hint + .error{margin-top:.2rem}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CODEXA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/welcome.css">
+  <link rel="stylesheet" href="css/noemix.css">
+</head>
+<body>
+  <div class="nebula" aria-hidden="true">
+    <i class="neb neb--left"></i><i class="neb neb--right"></i><i class="neb neb--core"></i>
+  </div>
+  <canvas id="galaxy" aria-hidden="true"></canvas>
+
+  <main class="stage">
+    <h1 class="title">CODE<span class="x">X</span>A</h1>
+
+    <section class="center">
+      <!-- Zona reservada para la representación definitiva de Noemix -->
+      <div class="halo" id="noemix-slot" aria-hidden="true" data-noemix data-noemix-defer></div>
+      <div class="copy">
+        <p class="hello">Hola, soy <span class="name">Noemix</span></p>
+        <p class="welcome">¡Bienvenido a CODEXA!</p>
+        <p class="phrase">«Cada gran logro comienza con una pequeña decisión. Hoy puedes dar el primer paso».</p>
+      </div>
+    </section>
+
+    <button type="button" class="go" id="startBtn" aria-label="Iniciar"></button>
+  </main>
+
+  <script src="js/galaxy.js"></script>
+  <script src="js/noemix-model.js"></script>
+  <script src="js/noemix.js"></script>
+  <script src="js/welcome.js"></script>
+</body>
+</html>

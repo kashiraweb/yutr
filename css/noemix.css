@@ -1,0 +1,3 @@
+/* Noemix: estilos mínimos y reutilizables. El tamaño lo define el contenedor de cada pantalla. */
+.noemix-mount{display:block;pointer-events:none}
+.noemix-mount svg{display:block;width:100%;height:100%;overflow:visible;background:transparent}

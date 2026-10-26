@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CODEXA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/noemix.css">
+</head>
+<body class="home-body">
+  <!-- Degradado compartido por los iconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <linearGradient id="langg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#42D9FF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+  </defs></svg>
+
+  <div class="nebula" aria-hidden="true"><i class="neb neb--left"></i><i class="neb neb--right"></i></div>
+  <canvas id="galaxy" aria-hidden="true"></canvas>
+
+  <div class="home">
+    <header class="top">
+      <div class="top__left">
+        <!-- Avatar: se sustituye el marcador con CodexaHome.setAvatar(url). .avatar__bg queda listo para fondos de perfil futuros -->
+        <div class="avatar" id="avatar" role="img" aria-label="Avatar del usuario">
+          <span class="avatar__bg"></span>
+          <img id="avatarImg" alt="" hidden>
+        </div>
+      </div>
+
+      <div class="top__center">
+        <!-- Experiencia: el rayo representa solo los puntos de XP, no forma parte del logotipo -->
+        <div class="xp" id="xp" aria-label="Puntos de experiencia: 0">
+          <svg class="xp__bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 2 4.5 13.5h6L9.5 22l9-11.5h-6z" fill="none" stroke="url(#langg)" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <span class="xp__value" id="xpValue">0</span>
+        </div>
+        <h1 class="brand home-title">CODE<span class="x">X</span>A</h1>
+      </div>
+
+      <div class="top__right">
+        <button type="button" class="access" id="access1" aria-label="Acceso 1"><svg viewBox="0 0 24 24" fill="none" stroke="url(#langg)" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/></svg></button>
+        <button type="button" class="access" id="access2" aria-label="Acceso 2"><svg viewBox="0 0 24 24" fill="none" stroke="url(#langg)" stroke-width="1.8" aria-hidden="true"><rect x="5.5" y="5.5" width="13" height="13" rx="3.5"/></svg></button>
+        <button type="button" class="access" id="access3" aria-label="Acceso 3"><svg viewBox="0 0 24 24" fill="none" stroke="url(#langg)" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5 19.5 12 12 19.5 4.5 12z"/></svg></button>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="hero__copy">
+        <h2 class="hero__title">Cada <span class="hl hl--1">línea</span> de <span class="hl hl--2">código</span> te acerca a una nueva <span class="hl hl--3">posibilidad</span></h2>
+        <p class="hero__sub">Aprende, experimenta y construye tu propio futuro</p>
+      </div>
+      <!-- Espacio reservado para Noemix: círculo vacío -->
+      <div class="noemix-circle" id="noemix-slot" aria-hidden="true" data-noemix></div>
+    </main>
+
+    <nav class="dock" aria-label="Navegación principal">
+      <a href="languages.html" class="dock__btn dock__btn--play" id="langBtn" data-nav aria-label="Lenguajes informáticos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.5v13l10.5-6.5z" fill="currentColor"/></svg>
+      </a>
+
+      <button type="button" class="dock__btn dock__btn--home is-active" id="homeBtn" aria-current="page" aria-label="Inicio">
+        <svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+      </button>
+
+      <div class="dock__btn dock__lang" id="langSymbol" role="img" aria-label="Ningún lenguaje seleccionado"></div>
+    </nav>
+  </div>
+
+  <script src="../js/galaxy.js"></script>
+  <script src="../js/languages-data.js"></script>
+  <script src="../js/noemix-model.js"></script>
+  <script src="../js/noemix.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>

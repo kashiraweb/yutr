@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear cuenta · CODEXA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="../css/noemix.css">
+</head>
+<body>
+  <div class="nebula" aria-hidden="true"><i class="neb neb--left"></i><i class="neb neb--right"></i></div>
+  <canvas id="galaxy" aria-hidden="true"></canvas>
+  <div class="orbits" aria-hidden="true">
+    <svg viewBox="0 0 400 400" fill="none">
+      <defs>
+        <linearGradient id="og" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#42D9FF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+        <radialGradient id="dot"><stop offset="0" stop-color="#EAF6FF"/><stop offset=".45" stop-color="#42D9FF"/><stop offset="1" stop-color="#42D9FF" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g class="ring r1"><circle cx="200" cy="200" r="195" stroke="url(#og)" stroke-width=".8"/><circle cx="200" cy="5" r="7" fill="url(#dot)"/></g>
+      <g class="ring r2"><circle cx="200" cy="200" r="165" stroke="url(#og)" stroke-width=".7" stroke-dasharray="1.5 7"/><circle cx="365" cy="200" r="6" fill="url(#dot)"/><circle cx="35" cy="200" r="4" fill="url(#dot)"/></g>
+      <g class="ring r3"><circle cx="200" cy="200" r="135" stroke="url(#og)" stroke-width=".9" stroke-dasharray="46 12 3 12"/><circle cx="200" cy="335" r="5" fill="url(#dot)"/></g>
+    </svg>
+  </div>
+
+  <main class="page">
+    <section class="panel" aria-labelledby="brand">
+      <h1 class="brand" id="brand"><a href="../index.html" aria-label="CODEXA, volver al inicio">CODE<span class="x">X</span>A</a></h1>
+      <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+
+      <form id="registerForm" action="../backend/auth/register.php" method="post" novalidate>
+        <div class="field">
+          <label for="username">Usuario</label>
+          <input type="text" id="username" name="username" placeholder="Elige un nombre de usuario" autocomplete="username" maxlength="20" autocapitalize="none" spellcheck="false" required aria-describedby="usernameError">
+          <p class="error" id="usernameError"></p>
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <div class="pass">
+            <input type="password" id="password" name="password" placeholder="Crea una contraseña" autocomplete="new-password" maxlength="72" required aria-describedby="passwordHint passwordError">
+            <button type="button" class="toggle" data-target="password" aria-label="Mostrar contraseña" aria-pressed="false">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="slash" d="M4 4l16 16"/></svg>
+            </button>
+          </div>
+          <p class="hint" id="passwordHint">Mínimo 8 caracteres.</p>
+          <p class="error" id="passwordError"></p>
+        </div>
+
+        <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+        <button type="submit" class="submit" id="submitBtn">CREAR CUENTA</button>
+      </form>
+
+      <p class="alt">¿Ya tienes una cuenta? <a href="login.html" data-nav>Inicia sesión</a></p>
+    </section>
+
+    <!-- Espacio reservado para Noemix -->
+    <div class="noemix-slot" id="noemix-slot" aria-hidden="true" data-noemix="calm"></div>
+  </main>
+
+  <script src="../js/galaxy.js"></script>
+  <script src="../js/noemix-model.js"></script>
+  <script src="../js/noemix.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>
